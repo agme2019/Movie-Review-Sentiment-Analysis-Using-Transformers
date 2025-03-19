@@ -126,7 +126,7 @@ We experimented with various model configurations and training strategies. Here'
 
 2. **Overfitting**: Models with very high validation accuracy (0.99+) but lower test accuracy (~0.75) suggest some overfitting to the training data.
 
-3. **Data Augmentation**: While augmentation helped achieve perfect validation accuracy, it didn't consistently improve test accuracy, suggesting that the augmentation techniques may not have provided sufficient diversity for better generalization.
+3. **Data Augmentation**: While augmentation helped achieve perfect validation accuracy, it didn't consistently improve test accuracy, suggesting that the augmentation techniques may not have provided sufficient diversity for better generalization. TX-aug was fed with additional 20% augmented data, whereas TX-aug-new2 was fed with additional 80% augmented data.
 
 4. **Sequence Length**: Increasing the maximum sequence length from 100 to 512 tokens (TX-aug-new2) provided a small improvement in test accuracy compared to the equivalent model with shorter sequences.
 
