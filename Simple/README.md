@@ -32,7 +32,7 @@ The architecture is configurable through various hyperparameters:
 
 ## Dataset
 
-The project uses the IMDB movie review dataset ([Maas et al., 2011](https://ai.stanford.edu/~amaas/data/sentiment/)), which contains 50,000 movie reviews labeled as positive or negative. The dataset is pre-processed and split into training and testing sets.
+The project uses the IMDB movie review dataset ([Maas et al., 2011](https://ai.stanford.edu/~amaas/data/sentiment/)), which contains 50,000 movie reviews labeled as positive or negative. The dataset is pre-processed and split into training and testing sets. Each set is in a separate folder within which there are sub folders called "pos" and "neg". The ```data_prep.py``` code creates the labeled dataframe that can be tokenized.
 
 ## Getting Started
 
