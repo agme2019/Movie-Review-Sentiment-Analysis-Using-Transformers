@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 
+#data_path = "/Desktop/IMDB Movie Review Sentiment/train_data"
 data_path = "/Desktop/IMDB Movie Review Sentiment/test_data"
 reviews = []
 labels = []
@@ -29,5 +30,6 @@ print(df.head())
 print(f"Number of reviews: {len(df)}")
 print(f"Columns in DataFrame: {df.columns.tolist()}")
 
+#df.to_csv("imdb_train_dataset.csv", index=False)
 df.to_csv("imdb_test_dataset.csv", index=False)
 
