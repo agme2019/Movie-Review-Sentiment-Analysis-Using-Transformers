@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-data_path = "/Users/agnivogosai/Desktop/IMDB Movie Review Sentiment/test_data"
+data_path = "/Desktop/IMDB Movie Review Sentiment/test_data"
 reviews = []
 labels = []
 
