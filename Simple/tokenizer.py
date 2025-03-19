@@ -13,7 +13,7 @@ tokenized = tokenizer(
     df['review'].tolist(),
     padding='max_length',
     truncation=True,
-    max_length=100,  # consistent length for each review
+    max_length=100,  # consistent length for each review, change if you need to, also update CONFIG
     return_tensors='pt'
 )
 
