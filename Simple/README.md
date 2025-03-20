@@ -33,7 +33,7 @@ The architecture is configurable through various hyperparameters:
 ## Dataset
 
 The project uses the IMDB movie review dataset ([Maas et al., 2011](https://ai.stanford.edu/~amaas/data/sentiment/)), which contains 50,000 movie reviews labeled as positive or negative. The dataset is pre-processed and split into training and testing sets. Each set is in a separate folder within which there are sub folders called "pos" and "neg". The ```data_prep.py``` code creates the labeled dataframe that can be tokenized.
-Contextual augmentation is also used to increase the quantity of the dataset for increasing test accuracy for same model architecture. Details are described [here](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/blob/main/Simple/Contextual%20Augmentation.md)
+Contextual augmentation is also used to increase the quantity of the dataset for increasing test accuracy for same model architecture. Details are described [here](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/blob/main/Simple/Contextual%20Augmentation.md).
 
 ## Getting Started
 
