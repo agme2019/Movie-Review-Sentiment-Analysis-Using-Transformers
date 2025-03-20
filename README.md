@@ -2,7 +2,7 @@
 Created this project to apply my learnings on Transformers, used the IMDB dataset
 
 The first model codes are available in the "Simple" folder. The test accuracy is ~ **75 %**.
-Train and test data are 25k each.
+Train and test data are 25k each. Each of the 25k data are equally divided between positive and negative reviews.
 
 **Simple Transformers Model**
 
