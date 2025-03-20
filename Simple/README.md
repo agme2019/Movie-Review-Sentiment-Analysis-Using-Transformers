@@ -118,7 +118,7 @@ We experimented with various model configurations and training strategies. Here'
 | TX-4     | 4      | 256       | 8     | 100        | 10.9M      | 0.049      | 0.991   | 0.761    |
 | TX-5     | 4      | 512       | 8     | 100        | 28.23M     | 0.021      | 0.999   | 0.755    |
 | TX-aug   | 4      | 256       | 4     | 100        | 10.9M      | 0.031      | 1.000   | 0.743    |
-| TX-aug-new2 | 4   | 256       | 4     | 512        | 10.9M      | 0.031      | 1.000   | 0.748    |
+| TX-aug-new2 | 4   | 256       | 4     | 512        | 10.9M      | 0.017      | 1.000   | 0.717    |
 
 ### Key Observations
 
@@ -174,6 +174,18 @@ A consistent pattern in our experiments is that test accuracy remains around 75%
 5. **Overfitting to Spurious Correlations**:
    - The high training and validation accuracy suggests the model might be learning superficial patterns in the training data that don't generalize to the test distribution.
    - Simple sentiment classification can often rely on the presence of certain keywords rather than understanding review context.
+  
+An interesting finding is that the model with max sequence length = 512 actually performed worse (71.7% test accuracy) despite achieving a better training loss (0.017) and excellent validation accuracy (0.999). This reinforces the observations about overfitting. The longer sequence length model seems to be overfitting even more severely than the models with shorter sequence lengths. This could be happening for several reasons:
+
++ **Increased model complexity** - While the parameter count remains the same (10.9M), the longer sequences mean the model is processing more tokens and has more opportunities to find spurious correlations in the training data.
+
++ **Sparse information density** - Movie reviews might not have relevant sentiment information distributed throughout the entire 512-token sequence, so the model could be learning noise from the additional tokens.
+
++  **Training dynamics** - The lower training loss (0.017) coupled with worse test performance (71.7%) is a classic sign of overfitting, where the model memorizes training examples rather than learning generalizable patterns.
+
++  **Attention dilution** - With longer sequences, attention might be diluted across more tokens, making it harder for the model to focus on the most sentiment-relevant parts of the text.
+
+It shows that simply increasing sequence length isn't always beneficial, and can sometimes be detrimental to generalization performance. 
 
 ## Comparison with State-of-the-Art
 
