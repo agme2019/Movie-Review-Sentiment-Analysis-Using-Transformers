@@ -189,7 +189,7 @@ It shows that simply increasing sequence length isn't always beneficial, and can
 
 ## Comparison with State-of-the-Art
 
-For context, state-of-the-art pre-trained models like BERT and RoBERTa typically achieve 94-96% accuracy on IMDB sentiment classification. Our ~75% accuracy with a smaller custom model represents the trade-off between:
+For context, state-of-the-art pre-trained models like BERT and RoBERTa typically achieve 94-96% accuracy [citations](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/blob/main/Simple/BERT-RoBERTa_citations.md) on IMDB sentiment classification. Our ~75% accuracy with a smaller custom model represents the trade-off between:
 
 - Lower computational requirements
 - No dependency on large pre-trained models
