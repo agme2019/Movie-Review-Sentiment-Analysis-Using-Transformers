@@ -66,6 +66,7 @@ This tool performs back-translation data augmentation for text classification ta
    - Translates it back to the source language
    - Adds the back-translated version to the augmented dataset
 4. The tool saves the combined dataset (original + augmented) to the specified output directory.
+   
 Note : The code displays random examples of back-translated reviews paired with unrelated original reviews, making it impossible to see the true effect of back-translation. Add an ```original_index column``` to track which original review each translation came from, then use this index to retrieve the correct original review when displaying examples for comparison.
 
 ## Example
