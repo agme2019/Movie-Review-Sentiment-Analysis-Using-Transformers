@@ -23,7 +23,7 @@ This tool performs back-translation data augmentation for text classification ta
 - SentencePiece
 - pandas
 - tqdm
-- Google Colab (for GPU acceleration)
+- GPU for acceleration (I used Google Colab)
 
 ## Usage
 
@@ -66,6 +66,7 @@ This tool performs back-translation data augmentation for text classification ta
    - Translates it back to the source language
    - Adds the back-translated version to the augmented dataset
 4. The tool saves the combined dataset (original + augmented) to the specified output directory.
+Note : The code displays random examples of back-translated reviews paired with unrelated original reviews, making it impossible to see the true effect of back-translation. Add an ```original_index column``` to track which original review each translation came from, then use this index to retrieve the correct original review when displaying examples for comparison.
 
 ## Example
 
@@ -111,9 +112,6 @@ Below are examples of original texts and their back-translations from the output
 
 ## Example 1
 
-**Original:**
-> "Der Todesking" is not exactly the type of film that makes you merry Jörg Buttgereit's second cult monument in a row, which is actually a lot better than the infamous "Nekromantik", exists of seven stories about suicide, one for every day of the week...
-
 **Back-translated (French):**
 > This film is an eye-opener for those who can only the glamorous lifestyles of the stars. It tells you how people who would like to do good are not able to do it. Moreover, the scene of the bomb explosion is very real.
 
@@ -121,9 +119,6 @@ Below are examples of original texts and their back-translations from the output
 > This film is an eye opener for those who can only see the glamorous lifestyles of the stars. It tells you how people who want to do good are not able to. Plus the bomb explosion scene is very real.
 
 ## Example 2
-
-**Original:**
-> A DOUBLE LIFE has developed a mystique among film fans for two reasons: the plot idea of an actor getting so wrapped up into a role (here Othello) as to pick up the great flaw of that character and put it into his own life...
 
 **Back-translated (French):**
 > She is perfect. Her inexperience of action actually works in her favor. We have never seen her before, so it really looks like her story. She also faces a real hardness. It works against her, but because we've never seen her before, she comes across as a tough person rather than an actress playing a tough person.
