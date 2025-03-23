@@ -5,7 +5,7 @@ The model codes are available in the ["Simple"](https://github.com/agme2019/Movi
 Train and test data are 25k each. Each of the 25k data are equally divided between positive and negative reviews.
 The model is first trained and validated on the train dataset and then tested on the "unseen" test data.
 
-Several augmentation methods are utiized to increase the training dataset, including [backtranslation](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Backtranslated), but even that could not improve the test accuracy.
+Several augmentation methods are utiized to increase the training dataset, including [back-translation](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Backtranslated), but even that could not improve the test accuracy.
 
 **Simple Transformers Model**
 
@@ -47,5 +47,23 @@ The best model appears to be TX-3 with a test accuracy of 0.762 (76.2%). This mo
 The back-translated data augmentation model achieved a test accuracy of 0.754 (75.4%), which is 0.8% lower than the best model. It uses the same architecture (4 layers, 256 embedding dimensions, 4 attention heads, 10.9M parameters) but incorporates 85% more training data through back-translation.
 
 Interestingly, while the back-translation approach provides significantly more training data, it doesn't improve performance. The model shows a slightly lower validation accuracy (0.994 vs 0.997) and a lower test accuracy compared to TX-3. This suggests that simply increasing data volume through back-translation may not necessarily lead to better generalization on the IMDB sentiment classification task, and the original data may already contain sufficient information for this specific task.
+
+# Key Limitations and Performance Analysis
+
+## The 75% Test Accuracy Ceiling
+
+Our experiments consistently hit a ~75% test accuracy ceiling despite architecture changes:
+
+1. **Model vs. Dataset Limitation**: Increasing model size from TX-1 (4.3M) to TX-5 (28.2M) showed diminishing returns, suggesting dataset complexity limits performance more than model capacity.
+
+2. **Training-Test Mismatch**: Near-perfect validation accuracy (~99%) vs. modest test performance (~75%) indicates distribution differences between datasets.
+
+3. **Longer Sequences Hurt Performance**: Increasing max sequence length to 512 tokens actually decreased accuracy to 71.7%, despite better training metrics - a clear sign of overfitting.
+
+4. **Data Augmentation Ineffective**: Adding 85% more data through back-translation didn't improve performance, reinforcing that the limitation isn't data quantity.
+
+## Context with SOTA
+
+The ~75% accuracy compares to 94-96% from pre-trained models like BERT on the same task, highlighting the significant value of pre-training on large corpora compared to training smaller models from scratch.
 
 
