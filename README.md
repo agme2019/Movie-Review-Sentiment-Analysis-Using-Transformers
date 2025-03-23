@@ -1,9 +1,11 @@
 # Movie-Review-Sentiment-Analysis-Using-Transformers
 Created this project to apply my learnings on Transformers, used the IMDB dataset
 
-The first model codes are available in the ["Simple"](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Simple) folder. The test accuracy is ~ **75 %**.
+The model codes are available in the ["Simple"](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Simple) folder. The test accuracy is ~ **75 %**.
 Train and test data are 25k each. Each of the 25k data are equally divided between positive and negative reviews.
 The model is first trained and validated on the train dataset and then tested on the "unseen" test data.
+
+Several augmentation methods are utiized to increase the training dataset, including [backtranslation](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Backtranslated), but even that could not improve the test accuracy.
 
 **Simple Transformers Model**
 
