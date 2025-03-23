@@ -62,7 +62,7 @@ Our experiments consistently hit a ~75% test accuracy ceiling despite architectu
 
 4. **Data Augmentation Ineffective**: Adding 85% more data through back-translation didn't improve performance, reinforcing that the limitation isn't data quantity.
 
-## Context with SOTA
+## Comparison with SOTA
 
 The ~75% accuracy compares to 94-96% from pre-trained models like BERT on the same task, highlighting the significant value of pre-training on large corpora compared to training smaller models from scratch.
 
