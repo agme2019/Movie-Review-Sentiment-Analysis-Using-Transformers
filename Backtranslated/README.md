@@ -109,7 +109,7 @@ The tool generates a CSV file with the following columns:
 
 # Example Translation Results
 
-Below are examples of original texts and their back-translations from the output of the back-translation augmentation tool:
+Below are examples of back-translations from the output of the back-translation augmentation tool:
 
 ## Example 1
 
