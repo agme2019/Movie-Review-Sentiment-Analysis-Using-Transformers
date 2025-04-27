@@ -37,22 +37,9 @@ matplotlib
 tqdm
 ```
 
-### Installation
-
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/imdb-bert-sentiment.git
-cd imdb-bert-sentiment
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
 ### Dataset
 
-The model is trained on the IMDB dataset containing 25,000 movie reviews labeled as positive or negative. Download the dataset [here](https://ai.stanford.edu/~amaas/data/sentiment/).
+The model is trained on the augmented IMDB dataset.
 
 ### Training
 
@@ -82,8 +69,8 @@ The model achieves significantly better performance compared to models with rand
 
 | Model Type | Test Accuracy |
 |------------|---------------|
-| Random Embeddings | ~78% |
-| BERT Embeddings | ~85-90% |
+| Random Embeddings | ~77% |
+| BERT Embeddings | ~85% |
 
 ## 📁 Project Structure
 
