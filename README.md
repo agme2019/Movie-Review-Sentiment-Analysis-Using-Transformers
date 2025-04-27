@@ -7,6 +7,8 @@ The model is first trained and validated on the train dataset and then tested on
 
 Several augmentation methods are utiized to increase the training dataset, including [back-translation](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Backtranslated), but even that could not improve the test accuracy.
 
+An imoroved version was made later that was run on the augmented dataset and could achieve a slightly higher test accuracy ~ **77 %**. This improved transformer classification system enhances both model architecture and training methodology, with the model incorporating higher dropout, layer normalization, and GELU activation for better regularization and stability. The training pipeline adds validation monitoring, early stopping, L2 regularization, and improved model saving strategy to prevent overfitting and ensure optimal model selection, resulting in better generalization performance.
+
 **Simple Transformers Model**
 
 1. **Input Processing**:
@@ -36,13 +38,16 @@ The diagram also highlights how the [CLS] token flows through the model and is u
 
 | Model ID | Test Accuracy | Architecture | Parameters | Notes |
 |----------|---------------|--------------|------------|-------|
-| TX-3 (Best) | 76.2% | 4 layers, 256 dim, 4 heads | 10.9M | Best overall performance |
+| TX-3 (Best in simple) | 76.2% | 4 layers, 256 dim, 4 heads | 10.9M | Best overall performance |
 | TX-5 | 75.5% | 4 layers, 512 dim, 8 heads | 28.23M | Larger model with more parameters |
 | TX-2 | 75.6% | 4 layers, 128 dim, 4 heads | 4.7M | Fewer parameters |
 | TX-1 | 75.4% | 2 layers, 128 dim, 4 heads | 4.3M | Smallest model |
 | Back-translated | 75.4% | 4 layers, 256 dim, 4 heads | 10.9M | Used 85% more augmented data |
+| TX-6 | 77.3% | 4 layers, 256 dim, 4 heads | 10.9M | Used 85% more augmented data |
 
-The best model appears to be TX-3 with a test accuracy of 0.762 (76.2%). This model uses 4 transformer layers, 256 embedding dimensions, and 4 attention heads, resulting in 10.9M parameters.
+Note : With the better model, increasing layers or embedding dimensions did not produce any significant gain.
+
+For the simpler implementation, the best model appears to be TX-3 with a test accuracy of 0.762 (76.2%). This model uses 4 transformer layers, 256 embedding dimensions, and 4 attention heads, resulting in 10.9M parameters.
 
 The back-translated data augmentation model achieved a test accuracy of 0.754 (75.4%), which is 0.8% lower than the best model. It uses the same architecture (4 layers, 256 embedding dimensions, 4 attention heads, 10.9M parameters) but incorporates 85% more training data through back-translation.
 
