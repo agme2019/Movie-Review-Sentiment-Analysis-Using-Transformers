@@ -7,7 +7,7 @@ The model is first trained and validated on the train dataset and then tested on
 
 Several augmentation methods are utiized to increase the training dataset, including [back-translation](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Backtranslated), but even that could not improve the test accuracy.
 
-An imoroved version was made later that was run on the augmented dataset and could achieve a slightly higher test accuracy ~ **77 %**. This improved transformer classification system enhances both model architecture and training methodology, with the model incorporating higher dropout, layer normalization, and GELU activation for better regularization and stability. The training pipeline adds validation monitoring, early stopping, L2 regularization, and improved model saving strategy to prevent overfitting and ensure optimal model selection, resulting in better generalization performance.
+An imoroved version was made later that was run on the augmented dataset and could achieve a slightly higher test accuracy ~ **77 %**. This improved transformer classification system [(better)](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Better) enhances both model architecture and training methodology, with the model incorporating higher dropout, layer normalization, and GELU activation for better regularization and stability. The training pipeline adds validation monitoring, early stopping, L2 regularization, and improved model saving strategy to prevent overfitting and ensure optimal model selection, resulting in better generalization performance.
 
 **Simple Transformers Model**
 
