@@ -6,7 +6,8 @@ A PyTorch implementation of a movie review sentiment classifier that combines pr
 
 This project uses pre-trained BERT embeddings to classify IMDB movie reviews as either positive or negative. By leveraging BERT's language understanding capabilities, the model achieves high accuracy without needing to learn language patterns from scratch.
 
-![Model Architecture](https://example.com/model_diagram.png)
+![loss_curves](https://github.com/user-attachments/assets/dad13f30-4c0a-4ce3-bedd-6c58d36258bc)
+![accuracy_curve](https://github.com/user-attachments/assets/52022e2e-35d2-4308-bf68-4cb4feccc82f)
 
 ## ✨ Features
 
