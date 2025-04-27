@@ -10,6 +10,8 @@ Augmented dataset can be found here : [data](https://github.com/agme2019/Movie-R
 
 An imoroved version was made later that was run on the augmented dataset and could achieve a slightly higher test accuracy ~ **77 %**. This improved transformer classification system [(better)](https://github.com/agme2019/Movie-Review-Sentiment-Analysis-Using-Transformers/tree/main/Better) enhances both model architecture and training methodology, with the model incorporating higher dropout, layer normalization, and GELU activation for better regularization and stability. The training pipeline adds validation monitoring, early stopping, L2 regularization, and improved model saving strategy to prevent overfitting and ensure optimal model selection, resulting in better generalization performance.
 
+Ultimately finetuned BERT models could achive a test accuracy of ~**85 %**.
+
 **Simple Transformers Model**
 
 1. **Input Processing**:
